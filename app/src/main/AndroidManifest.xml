@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.demo.barry.myDemo" >
+
+    <application
+        android:name="com.demo.barry.myDemo.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_demo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_demo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="donut"
+        tools:ignore="RtlEnabled">
+        <activity android:name="com.demo.barry.myDemo.activity.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

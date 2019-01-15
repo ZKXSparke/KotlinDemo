@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/ff_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/green_light" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ll_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.demo.barry.base_utils.view.DrawableTextView
+            android:id="@+id/dtv_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="7dp"
+            android:drawableTop="@drawable/sl_home"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="@color/sl_blue_grey"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:top_height="22dp"
+            app:top_width="22dp" />
+
+        <com.demo.barry.base_utils.view.DrawableTextView
+            android:id="@+id/dtv_automation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="7dp"
+            android:drawableTop="@drawable/sl_building"
+            android:gravity="center"
+            android:text="@string/demo"
+            android:textColor="@color/sl_blue_grey"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/dtv_device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dtv_device"
+            app:top_height="22dp"
+            app:top_width="22dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="43dp"
+            app:layout_constraintBottom_toBottomOf="@id/dtv_device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dtv_device">
+
+            <ImageView
+                android:id="@+id/dtv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_mine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/mine"
+                android:textColor="@color/sl_blue_grey"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dtv_profile" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

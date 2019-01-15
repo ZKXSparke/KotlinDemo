@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion compile_sdk
+        defaultConfig {
+        applicationId "com.demo.barry.myDemo"
+        minSdkVersion min_sdk
+        targetSdkVersion target_sdk
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/*'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.github.VictorChow.SmartGo:core:$smart_go_version"
+    kapt "com.github.VictorChow.SmartGo:compiler:$smart_go_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(':base-utils')
+    implementation project(':app-account')
+    implementation project(':app-building')
+}
+repositories {
+    mavenCentral()
+}
+
+
+androidExtensions {
+    experimental = true
+}
+
+kapt {
+    arguments {
+        arg("module", project.name)
+    }
+}

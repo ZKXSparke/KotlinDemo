@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demo.barry.demoPage">
+
+    <application>
+        <activity
+            android:name="com.demo.barry.demoPage.activity.BuildingActivity"
+            android:label="楼盘"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.demo.barry.demoPage.demoActivity.ThreadPoolActivity"
+            android:label="线程池"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".demoActivity.eventBus.EventBusActivity"
+            android:label="EventBus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".demoActivity.eventBus.SecondActivity"
+            android:label="SecondActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

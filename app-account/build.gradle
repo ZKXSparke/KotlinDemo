@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion compile_sdk
+
+    defaultConfig {
+        minSdkVersion min_sdk
+        targetSdkVersion target_sdk
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation "com.github.VictorChow.SmartGo:core:$smart_go_version"
+    kapt "com.github.VictorChow.SmartGo:compiler:$smart_go_version"
+    implementation project(':base-utils')
+}
+
+kapt {
+    arguments {
+        arg("module", project.name)
+    }
+}
+repositories {
+    mavenCentral()
+}

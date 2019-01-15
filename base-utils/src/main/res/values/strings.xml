@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Demo</string>
+    <string name="check_network">Connection to Network failed, please check your network</string>
+    <string name="click_again">Double click the “return” button to exit.</string>
+    <string name="need_permission">Apply for permission %s</string>
+    <string name="mine">我的</string>
+    <string name="home">主页</string>
+    <string name="building">房屋</string>
+    <string name="city">城市</string>
+    <string name="thread_demo">线程池操作Demo</string>
+    <string name="event_demo">EventBusDemo</string>
+    <string name="thread">Thread</string>
+    <string name="eventBus">EventBus</string>
+    <string name="demo">Demo</string>
+    <string name="helloWorld">Hello World :)</string>
+    <string name="EventBusActivity">EventBusActivity</string>
+    <string name="SecondActivity">SecondActivity</string>
+    <string name="subscriptionEvent">Subscription Event</string>
+    <string name="sendEvent">Send Event</string>
+    <string name="sendStickyEvents">Send sticky events</string>
+    <string name="stickyEvents">Sticky Events</string>
+    <string name="jumpToSecond">Jump To SecondActivity</string>
+    <string name="repeatRegistration">Don\'t repeat registration events</string>
+    <string name="wish">我的心愿是世界和平</string>
+</resources>
