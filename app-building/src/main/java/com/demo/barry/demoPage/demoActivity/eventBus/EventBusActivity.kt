@@ -51,12 +51,12 @@ class EventBusActivity : BaseActivity<BasePresenter>(){
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onMoonEvent(messageEvent: MessageEvent) {
+    fun Event(messageEvent: MessageEvent) {
         tv_message.text = messageEvent.getMessage()
     }
 
     @Subscribe(sticky = true)
-    fun ononMoonStickyEvent(messageEvent: MessageEvent) {
+    fun StickyEvent(messageEvent: MessageEvent) {
         tv_message.text = messageEvent.getMessage()
     }
 }

@@ -19,6 +19,14 @@
             android:name=".demoActivity.eventBus.SecondActivity"
             android:label="SecondActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".demoActivity.TTSActivity"
+            android:label="TTSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".demoActivity.baidutts.BaiduTTSActivity"
+            android:label="BaiduTTSActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

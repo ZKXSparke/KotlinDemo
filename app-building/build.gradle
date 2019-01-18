@@ -9,12 +9,25 @@ android {
     defaultConfig {
         minSdkVersion min_sdk
         targetSdkVersion target_sdk
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a','x86_64'
+        }
+    }
+
+    sourceSets {
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
     }
 
 }
 
 dependencies {
+    implementation files('libs/com.baidu.tts_2.3.2.20180713_6101c2a.jar')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/Sunflower.jar')
+    implementation files('libs/Msc.jar')
     testImplementation 'junit:junit:4.12'
     implementation "com.github.VictorChow.SmartGo:core:$smart_go_version"
     kapt "com.github.VictorChow.SmartGo:compiler:$smart_go_version"
@@ -26,6 +39,8 @@ kapt {
         arg("module", project.name)
     }
 }
+
+
 repositories {
     mavenCentral()
 }

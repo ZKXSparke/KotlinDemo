@@ -1,7 +1,11 @@
 package com.demo.barry.myDemo.activity
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.view.View
 import com.demo.barry.app_account.fragment.MineFragment
 import com.demo.barry.demoPage.fragment.BuildingFragment
@@ -13,6 +17,7 @@ import com.demo.barry.base_utils.base.Nil
 import kotlinx.android.synthetic.main.activity_main.*
 import pers.victor.ext.*
 import pers.victor.smartgo.Path
+import java.util.ArrayList
 
 @Path(Paths.App.MainActivity)
 class MainActivity : BaseActivity<Nil>() {
@@ -26,6 +31,7 @@ class MainActivity : BaseActivity<Nil>() {
 
     override fun initWidgets() {
         window.setBackgroundDrawable(ColorDrawable(Color.WHITE))
+        initPermission()
         initBottomNavigation()
     }
 
@@ -49,6 +55,24 @@ class MainActivity : BaseActivity<Nil>() {
                 }
             }
         }
+    }
+
+    private fun initPermission() {
+        val permissions = arrayOf(Manifest.permission.INTERNET, Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.MODIFY_AUDIO_SETTINGS, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.WRITE_SETTINGS, Manifest.permission.READ_PHONE_STATE, Manifest.permission.ACCESS_WIFI_STATE, Manifest.permission.CHANGE_WIFI_STATE)
+
+        val toApplyList = ArrayList<String>()
+
+        for (perm in permissions) {
+            if (PackageManager.PERMISSION_GRANTED != ContextCompat.checkSelfPermission(this, perm)) {
+                toApplyList.add(perm)
+                // 进入到这里代表没有权限.
+            }
+        }
+        val tmpList = arrayOfNulls<String>(toApplyList.size)
+        if (!toApplyList.isEmpty()) {
+            ActivityCompat.requestPermissions(this, toApplyList.toTypedArray(), 123)
+        }
+
     }
 
     override fun useTitleBar() = false

@@ -12,5 +12,7 @@ object Paths {
         const val ThreadPoolActivity = "demoPage_ThreadPoolActivity"
         const val EventBusActivity = "demoPage_EventBusActivity"
         const val SecondActivity = "demoPage_SecondActivity"
+        const val TTSActivity = "demoPage_TTSActivity"
+        const val BaiduTTSActivity = "demoPage_BaiduTTSActivity"
     }
 }

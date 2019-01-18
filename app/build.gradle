@@ -5,12 +5,16 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion compile_sdk
-        defaultConfig {
+    defaultConfig {
         applicationId "com.demo.barry.myDemo"
         minSdkVersion min_sdk
         targetSdkVersion target_sdk
         versionCode 1
         versionName "1.0"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+        }
     }
     buildTypes {
         release {
