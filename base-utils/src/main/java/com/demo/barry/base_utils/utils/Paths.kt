@@ -14,5 +14,6 @@ object Paths {
         const val SecondActivity = "demoPage_SecondActivity"
         const val TTSActivity = "demoPage_TTSActivity"
         const val BaiduTTSActivity = "demoPage_BaiduTTSActivity"
+        const val QuickSortActivity = "demoPage_QuickSortActivity"
     }
 }

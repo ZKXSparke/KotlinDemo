@@ -25,4 +25,7 @@
     <string name="iflytek">科大讯飞语音合成</string>
     <string name="baidutts">百度语音合成</string>
     <string name="tts">语音合成</string>
+    <string name="resultShow">结果显示</string>
+    <string name="quickSort">快速排序</string>
+    <string name="quickSort">快速排序</string>
 </resources>

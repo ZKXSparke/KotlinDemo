@@ -1,3 +1,10 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="OrderTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/InfoTabTextAppearance</item>
+    </style>
 
+    <style name="InfoTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
 </resources>

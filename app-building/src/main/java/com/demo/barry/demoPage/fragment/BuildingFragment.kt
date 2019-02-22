@@ -24,6 +24,7 @@ class BuildingFragment : BaseFragment() {
             btn_thread -> activity?.goActivity(Paths.DemoPage.ThreadPoolActivity)
             btn_tts -> requestPermissions()
             btn_baidutts -> activity?.goActivity(Paths.DemoPage.BaiduTTSActivity)
+            btn_quickSort -> activity?.goActivity(Paths.DemoPage.QuickSortActivity)
         }
     }
 
